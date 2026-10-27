@@ -1,0 +1,96 @@
+# =========================================================
+#  PANEL DE ADMINISTRACIÓN (Decap CMS)
+#  Se abre en: https://TU-SITIO.netlify.app/admin/
+# =========================================================
+
+# --- Conexión con GitHub -------------------------------------------------
+# Repositorio: https://github.com/Gonzanicoo00/Catalogo-Nilu
+# Si usás DecapBridge para el login del cliente, reemplazá este bloque
+# "backend" por el que te da DecapBridge.
+backend:
+  name: github
+  repo: Gonzanicoo00/Catalogo-Nilu
+  branch: main
+  commit_messages:
+    update: "Actualizar {{slug}}"
+    uploadMedia: "Subir foto {{path}}"
+    deleteMedia: "Borrar foto {{path}}"
+
+# Para probar el panel en tu PC con XAMPP (ver la guía, paso "Probar en local")
+local_backend: true
+
+locale: es
+
+# Dónde se guardan las fotos que sube el cliente
+media_folder: img/productos
+public_folder: img/productos
+
+collections:
+  - name: catalogo
+    label: Catálogo
+    files:
+      # ---------------- PRODUCTOS ----------------
+      - name: productos
+        label: Productos
+        file: data/productos.json
+        format: json
+        fields:
+          - name: productos
+            label: Productos
+            label_singular: producto
+            widget: list
+            collapsed: true
+            add_to_top: true
+            summary: "{{fields.nombre}} · ${{fields.precio}} · {{fields.categoria}}"
+            fields:
+              - { name: nombre, label: Nombre, widget: string }
+              - name: categoria
+                label: Categoría
+                widget: string
+                hint: "Escribila siempre igual para que los productos queden juntos (ej: Vasos y Hoppies, Mate y Tereré, Hogar y Cocina, Electrónica, Belleza y Cuidado Personal, Regalos)."
+              - { name: precio, label: Precio, widget: number, value_type: int, min: 0 }
+              - name: precioAnterior
+                label: Precio anterior (opcional)
+                widget: number
+                value_type: int
+                min: 0
+                required: false
+                hint: "Si lo completás, se muestra tachado con el % de descuento."
+              - name: imagenes
+                label: Fotos
+                label_singular: foto
+                widget: list
+                hint: "La primera foto es la principal."
+                field: { name: foto, label: Foto, widget: image, choose_url: false }
+              - { name: descripcion, label: Descripción, widget: text, required: false }
+              - name: etiqueta
+                label: Etiqueta (opcional)
+                widget: string
+                required: false
+                hint: "Ej: Nuevo, Oferta, Top, Regalo."
+              - name: destacado
+                label: Destacado
+                widget: boolean
+                default: false
+                required: false
+                hint: "Aparece primero y en la foto grande del inicio."
+              - { name: stock, label: Hay stock, widget: boolean, default: true, required: false }
+
+      # ---------------- DATOS DEL NEGOCIO ----------------
+      - name: negocio
+        label: Datos del negocio
+        file: data/negocio.json
+        format: json
+        fields:
+          - { name: nombre, label: Nombre del negocio, widget: string }
+          - { name: slogan, label: Slogan, widget: string }
+          - { name: descripcion, label: Descripción, widget: text }
+          - name: whatsapp
+            label: WhatsApp
+            widget: string
+            hint: "Con código de país, sin +, espacios ni guiones. Argentina: 549 + área + número (ej: 5493704008673)."
+          - { name: instagram, label: Link de Instagram, widget: string, required: false }
+          - { name: email, label: Email, widget: string, required: false }
+          - { name: direccion, label: Dirección, widget: string, required: false }
+          - { name: horario, label: Horario, widget: string, required: false }
+          - { name: moneda, label: Símbolo de moneda, widget: string, default: "$" }

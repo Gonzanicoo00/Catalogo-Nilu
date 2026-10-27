@@ -1,0 +1,290 @@
+{
+  "productos": [
+    {
+      "nombre": "Hoppies con Manija 1200ml",
+      "categoria": "Vasos y Hoppies",
+      "precio": 15000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Hoppies con Manija 1200.jpeg"
+      ],
+      "descripcion": "Vaso térmico de acero inoxidable de 1200ml con manija y tapa. Ideal para tereré y bebidas frías o calientes.",
+      "etiqueta": "Top",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Quencher 1200ml",
+      "categoria": "Vasos y Hoppies",
+      "precio": 13000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Quencher 1200.jpeg"
+      ],
+      "descripcion": "Vaso térmico Quencher de 1200ml con manija, tapa y bombilla. Mantiene tus bebidas a la temperatura ideal.",
+      "etiqueta": "",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Vaso 1200ml con Bombilla de Acero",
+      "categoria": "Vasos y Hoppies",
+      "precio": 14000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Vaso 1200 Bombilla Acero.jpeg"
+      ],
+      "descripcion": "Vaso térmico de 1200ml con bombilla de acero inoxidable.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Vasos 1200ml Estampados",
+      "categoria": "Vasos y Hoppies",
+      "precio": 13000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Vasos 1200 Estampado.jpeg"
+      ],
+      "descripcion": "Vasos térmicos de 1200ml con diseños estampados.",
+      "etiqueta": "Nuevo",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Hoppies Deportivos",
+      "categoria": "Vasos y Hoppies",
+      "precio": 15000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Hoppies Deportivos.jpeg"
+      ],
+      "descripcion": "Hoppies con diseños deportivos, con tapa y bombilla.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Hoppies Infantiles",
+      "categoria": "Vasos y Hoppies",
+      "precio": 12500,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Hoppies Infantiles.jpeg"
+      ],
+      "descripcion": "Hoppies con diseños infantiles, ideales para los más chicos.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Jarras de Tereré 2L",
+      "categoria": "Mate y Tereré",
+      "precio": 27000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Jarras Terere 2L.jpeg"
+      ],
+      "descripcion": "Jarra térmica para tereré de 2 litros. Mantiene el agua bien fría.",
+      "etiqueta": "Top",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Mate Listo 1 Litro",
+      "categoria": "Mate y Tereré",
+      "precio": 22000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Mate Listo 1 Litro.jpeg"
+      ],
+      "descripcion": "Termo mate listo de 1 litro: mate y termo en un solo producto, práctico para llevar a todos lados.",
+      "etiqueta": "",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Pava Eléctrica",
+      "categoria": "Hogar y Cocina",
+      "precio": 13000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Pava Electrica.jpeg"
+      ],
+      "descripcion": "Pava eléctrica para calentar agua de forma rápida, ideal para el mate.",
+      "etiqueta": "",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Mixer",
+      "categoria": "Hogar y Cocina",
+      "precio": 15000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Mixer.jpeg"
+      ],
+      "descripcion": "Mixer de mano para licuados, salsas y preparaciones en la cocina.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Batidor de Café a Batería",
+      "categoria": "Hogar y Cocina",
+      "precio": 9800,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Batidor Cafe a Bateria.jpeg"
+      ],
+      "descripcion": "Batidor espumador a batería para café, leche y bebidas.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Cubiertos 25 Piezas",
+      "categoria": "Hogar y Cocina",
+      "precio": 14000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Cubiertos 25 Piezas.jpeg"
+      ],
+      "descripcion": "Set de cubiertos de 25 piezas en frasco organizador. Incluye pelador de frutas y verduras.",
+      "etiqueta": "Nuevo",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Astronauta Parlante",
+      "categoria": "Electrónica",
+      "precio": 24000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Astronauta Parlante.jpeg"
+      ],
+      "descripcion": "Parlante bluetooth con forma de astronauta.",
+      "etiqueta": "",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Lámpara Parlante",
+      "categoria": "Electrónica",
+      "precio": 32000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Lampara Parlante.jpeg"
+      ],
+      "descripcion": "Lámpara con parlante bluetooth incorporado.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Parlante Caracol",
+      "categoria": "Electrónica",
+      "precio": 13000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Parlante Caracol.jpeg"
+      ],
+      "descripcion": "Parlante bluetooth con diseño de caracol.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Cargador de Auto 5 en 1",
+      "categoria": "Electrónica",
+      "precio": 29000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Cargador de Auto 5 en 1.jpeg"
+      ],
+      "descripcion": "Cargador para auto 5 en 1 para cargar varios dispositivos a la vez.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Memory Card",
+      "categoria": "Electrónica",
+      "precio": 13000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Memory Card.jpeg"
+      ],
+      "descripcion": "Tarjeta de memoria para celulares, cámaras y otros dispositivos.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Cepillo Secador",
+      "categoria": "Belleza y Cuidado Personal",
+      "precio": 21000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Cepillo Secador.jpeg"
+      ],
+      "descripcion": "Cepillo secador para secar y peinar en un solo paso.",
+      "etiqueta": "",
+      "destacado": true,
+      "stock": true
+    },
+    {
+      "nombre": "Cepillo Spray",
+      "categoria": "Belleza y Cuidado Personal",
+      "precio": 15000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Cepillo Spray.jpeg"
+      ],
+      "descripcion": "Cepillo con spray de vapor para desenredar y alisar el cabello.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Removedor de Callos",
+      "categoria": "Belleza y Cuidado Personal",
+      "precio": 18000,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Removedor de Callos.jpeg"
+      ],
+      "descripcion": "Removedor eléctrico de callos y durezas para el cuidado de los pies.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Alhajero Rosa Eterna",
+      "categoria": "Regalos",
+      "precio": 13500,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Alajero Rosa Eterna.jpeg"
+      ],
+      "descripcion": "Alhajero con rosa eterna, un regalo ideal para una ocasión especial.",
+      "etiqueta": "Regalo",
+      "destacado": false,
+      "stock": true
+    },
+    {
+      "nombre": "Alhajeros",
+      "categoria": "Regalos",
+      "precio": 13500,
+      "precioAnterior": null,
+      "imagenes": [
+        "img/Alajeros.jpeg"
+      ],
+      "descripcion": "Alhajeros para guardar y organizar tus joyas.",
+      "etiqueta": "",
+      "destacado": false,
+      "stock": true
+    }
+  ]
+}
