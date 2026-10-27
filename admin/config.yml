@@ -74,6 +74,13 @@ collections:
                 default: false
                 required: false
                 hint: "Aparece primero y en la foto grande del inicio."
+              - name: cantidad
+                label: Cantidad disponible (opcional)
+                widget: number
+                value_type: int
+                min: 0
+                required: false
+                hint: "Unidades que hay. En 0 se muestra Sin stock; con 5 o menos se muestra Últimas unidades. Vacío = sin límite."
               - { name: stock, label: Hay stock, widget: boolean, default: true, required: false }
 
       # ---------------- DATOS DEL NEGOCIO ----------------

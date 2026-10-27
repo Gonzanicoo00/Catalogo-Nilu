@@ -454,6 +454,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .badge--nuevo { background: var(--primary); color: #fff; }
 .badge--off { background: #16161d; color: #fff; }
 .badge--nostock { background: var(--muted); color: #fff; }
+.badge--pocas { background: #e8590c; color: #fff; }
 
 .card__quick {
   position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2;

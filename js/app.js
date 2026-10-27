@@ -21,7 +21,7 @@
   const linkWhatsapp = (texto) =>
     `https://wa.me/${NEGOCIO.whatsapp}${texto ? `?text=${encodeURIComponent(texto)}` : ""}`;
   const normalizar = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-  const puedeHover =window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const puedeHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   const storage = {
     get(key, def) {
@@ -48,6 +48,9 @@
     </svg>`;
     return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
   }
+  /* Máximo de unidades que se pueden pedir de un producto */
+  const POCAS_UNIDADES = 5;
+  const maximo = (p) => p.cantidad ?? 99;
   /* ID numérico estable a partir del nombre (lo usa el pedido guardado) */
   function idDesdeNombre(nombre) {
     let h = 0;
@@ -64,9 +67,12 @@
         while (usados.has(id)) id++;
         usados.add(id);
         const imagenes = (p.imagenes || []).filter(Boolean);
+        const cantidad = p.cantidad === "" || p.cantidad == null ? null : Math.max(0, Number(p.cantidad) || 0);
         return {
           ...p,
           id,
+          cantidad,
+          stock: p.stock !== false && cantidad !== 0,
           precio: Number(p.precio) || 0,
           precioAnterior: Number(p.precioAnterior) || null,
           imagenes: imagenes.length ? imagenes : [imagenMuestra(p)],
@@ -171,6 +177,7 @@
 
   function htmlTarjeta(p, i) {
     const sinStock = p.stock === false;
+    const pocas = !sinStock && p.cantidad != null && p.cantidad <= POCAS_UNIDADES;
     const descuento = p.precioAnterior ? Math.round((1 - p.precio / p.precioAnterior) * 100) : 0;
     const etiqueta = p.etiqueta ? normalizar(p.etiqueta) : "";
     const [img1, img2] = p.imagenes;
@@ -180,6 +187,7 @@
         <div class="card__media" data-open="${p.id}">
           <div class="card__badges">
             ${sinStock ? `<span class="badge badge--nostock">Sin stock</span>` : ""}
+            ${pocas ? `<span class="badge badge--pocas">${p.cantidad === 1 ? "Última unidad" : `Últimas ${p.cantidad}`}</span>` : ""}
             ${p.etiqueta && !sinStock ? `<span class="badge badge--${etiqueta}">${escapar(p.etiqueta)}</span>` : ""}
             ${descuento > 0 && !sinStock ? `<span class="badge badge--off">-${descuento}%</span>` : ""}
           </div>
@@ -305,7 +313,10 @@
     if (!p || p.stock === false) return;
 
     const item = estado.carrito.find((x) => x.id === id);
-    item ? (item.cantidad += cantidad) : estado.carrito.push({ id, cantidad });
+    const enCarrito = item ? item.cantidad : 0;
+    if (enCarrito >= maximo(p)) return toast(`Solo hay ${maximo(p)} unidad${maximo(p) !== 1 ? "es" : ""} de ${p.nombre}`);
+    const nueva = Math.min(enCarrito + cantidad, maximo(p));
+    item ? (item.cantidad = nueva) : estado.carrito.push({ id, cantidad: nueva });
     guardarCarrito();
 
     if (origen) animarVuelo(origen, p.imagenes[0]);
@@ -320,6 +331,9 @@
   function cambiarCantidad(id, delta) {
     const item = estado.carrito.find((x) => x.id === id);
     if (!item) return;
+    const p = PRODUCTOS.find((x) => x.id === id);
+    if (p) item.cantidad = Math.min(item.cantidad, maximo(p));
+    if (p && delta > 0 && item.cantidad >= maximo(p)) return toast(`Solo hay ${maximo(p)} unidad${maximo(p) !== 1 ? "es" : ""} de ${p.nombre}`);
     item.cantidad += delta;
     if (item.cantidad <= 0) return quitarDelCarrito(id);
     guardarCarrito();
@@ -340,7 +354,10 @@
   function itemsCarrito() {
     return estado.carrito
       .map((it) => ({ ...it, producto: PRODUCTOS.find((p) => p.id === it.id) }))
-      .filter((it) => it.producto);
+      .filter((it) => it.producto)
+      // Si el stock bajó desde que se armó el pedido, se ajusta
+      .map((it) => ({ ...it, cantidad: Math.min(it.cantidad, maximo(it.producto)) }))
+      .filter((it) => it.cantidad > 0);
   }
 
   function renderCarrito() {
@@ -637,7 +654,7 @@
       $("#qtyValue").textContent = estado.cantidadModal;
     });
     $("#qtyPlus").addEventListener("click", () => {
-      estado.cantidadModal = Math.min(99, estado.cantidadModal + 1);
+      estado.cantidadModal = Math.min(maximo(estado.productoModal), estado.cantidadModal + 1);
       $("#qtyValue").textContent = estado.cantidadModal;
     });
     $("#modalAdd").addEventListener("click", (e) => {
