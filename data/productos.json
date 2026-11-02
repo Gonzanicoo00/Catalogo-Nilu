@@ -16,6 +16,7 @@
       "imagenes": [
         "img/Hoppies con Manija 1200.jpeg"
       ],
+      "cantidad": 1,
       "precio": 15000,
       "destacado": true,
       "nombre": "Hoppies con Manija 1200ml",
@@ -29,6 +30,7 @@
       "imagenes": [
         "img/Quencher 1200.jpeg"
       ],
+      "cantidad": 2,
       "precio": 13000,
       "destacado": true,
       "nombre": "Quencher 1200ml",
@@ -42,6 +44,7 @@
       "imagenes": [
         "img/Vaso 1200 Bombilla Acero.jpeg"
       ],
+      "cantidad": 1,
       "precio": 14000,
       "destacado": false,
       "nombre": "Vaso 1200ml con Bombilla de Acero",
@@ -55,6 +58,7 @@
       "imagenes": [
         "img/Vasos 1200 Estampado.jpeg"
       ],
+      "cantidad": 2,
       "precio": 13000,
       "destacado": false,
       "nombre": "Vasos 1200ml Estampados",
@@ -68,6 +72,7 @@
       "imagenes": [
         "img/Hoppies Deportivos.jpeg"
       ],
+      "cantidad": 1,
       "precio": 15000,
       "destacado": false,
       "nombre": "Hoppies Deportivos",
@@ -81,6 +86,7 @@
       "imagenes": [
         "img/Hoppies Infantiles.jpeg"
       ],
+      "cantidad": 4,
       "precio": 12500,
       "destacado": false,
       "nombre": "Hoppies Infantiles",
@@ -94,6 +100,7 @@
       "imagenes": [
         "img/Jarras Terere 2L.jpeg"
       ],
+      "cantidad": 1,
       "precio": 27000,
       "destacado": true,
       "nombre": "Jarras de Tereré 2L",
@@ -120,6 +127,7 @@
       "imagenes": [
         "img/Pava Electrica.jpeg"
       ],
+      "cantidad": 0,
       "precio": 13000,
       "destacado": true,
       "nombre": "Pava Eléctrica",
@@ -133,6 +141,7 @@
       "imagenes": [
         "img/Mixer.jpeg"
       ],
+      "cantidad": 0,
       "precio": 15000,
       "destacado": false,
       "nombre": "Mixer",
@@ -146,6 +155,7 @@
       "imagenes": [
         "img/Batidor Cafe a Bateria.jpeg"
       ],
+      "cantidad": 5,
       "precio": 9800,
       "destacado": false,
       "nombre": "Batidor de Café a Batería",
@@ -159,6 +169,7 @@
       "imagenes": [
         "img/Cubiertos 25 Piezas.jpeg"
       ],
+      "cantidad": 2,
       "precio": 14000,
       "destacado": false,
       "nombre": "Cubiertos 25 Piezas",
@@ -172,6 +183,7 @@
       "imagenes": [
         "img/Astronauta Parlante.jpeg"
       ],
+      "cantidad": 0,
       "precio": 24000,
       "destacado": true,
       "nombre": "Astronauta Parlante",
@@ -185,6 +197,7 @@
       "imagenes": [
         "img/Lampara Parlante.jpeg"
       ],
+      "cantidad": 4,
       "precio": 32000,
       "destacado": false,
       "nombre": "Lámpara Parlante",
@@ -198,6 +211,7 @@
       "imagenes": [
         "img/Parlante Caracol.jpeg"
       ],
+      "cantidad": 1,
       "precio": 13000,
       "destacado": false,
       "nombre": "Parlante Caracol",
@@ -211,6 +225,7 @@
       "imagenes": [
         "img/Cargador de Auto 5 en 1.jpeg"
       ],
+      "cantidad": 1,
       "precio": 29000,
       "destacado": false,
       "nombre": "Cargador de Auto 5 en 1",
@@ -224,6 +239,7 @@
       "imagenes": [
         "img/Memory Card.jpeg"
       ],
+      "cantidad": 0,
       "precio": 13000,
       "destacado": false,
       "nombre": "Memory Card",
@@ -237,6 +253,7 @@
       "imagenes": [
         "img/Cepillo Secador.jpeg"
       ],
+      "cantidad": 0,
       "precio": 21000,
       "destacado": true,
       "nombre": "Cepillo Secador",
@@ -250,6 +267,7 @@
       "imagenes": [
         "img/Cepillo Spray.jpeg"
       ],
+      "cantidad": 1,
       "precio": 15000,
       "destacado": false,
       "nombre": "Cepillo Spray",
@@ -263,6 +281,7 @@
       "imagenes": [
         "img/Removedor de Callos.jpeg"
       ],
+      "cantidad": 1,
       "precio": 18000,
       "destacado": false,
       "nombre": "Removedor de Callos",
