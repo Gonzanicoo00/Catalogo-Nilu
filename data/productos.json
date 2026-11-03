@@ -16,7 +16,7 @@
       "imagenes": [
         "img/Hoppies con Manija 1200.jpeg"
       ],
-      "cantidad": 1,
+      "cantidad": 3,
       "precio": 15000,
       "destacado": true,
       "nombre": "Hoppies con Manija 1200ml",
@@ -114,6 +114,7 @@
       "imagenes": [
         "img/Mate Listo 1 Litro.jpeg"
       ],
+      "cantidad": 3,
       "precio": 22000,
       "destacado": true,
       "nombre": "Mate Listo 1 Litro",
